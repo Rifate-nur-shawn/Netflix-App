@@ -1,31 +1,46 @@
-import './Home.css'
-import Navbar from '../../components/Navbar/Navbar'
-import hero_banner from '../../assets/hero_banner.jpg'
-import hero_title from '../../assets/hero_title.png'
-import play_icon from '../../assets/play_icon.png'
-import info_icon from '../../assets/info_icon.png'
-import TitleCards from '../../components/TitleCards/TitleCards'
-
-
+import "./Home.css";
+import Navbar from "../../components/Navbar/Navbar";
+import hero_banner from "../../assets/hero_banner.jpg";
+import hero_title from "../../assets/hero_title.png";
+import play_icon from "../../assets/play_icon.png";
+import info_icon from "../../assets/info_icon.png";
+import TitleCards from "../../components/TitleCards/TitleCards";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className="home">
       <Navbar />
       <div className="hero">
-        <img src={hero_banner} alt="" className='banner-img' />
+        <img src={hero_banner} alt="" className="banner-img" />
         <div className="hero-caption">
-          <img src={hero_title} alt="" className='caption-img' />
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia laboriosam blanditiis nam numquam, placeat hic?</p>
+          <img src={hero_title} alt="" className="caption-img" />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+            laboriosam blanditiis nam numquam, placeat hic?
+          </p>
           <div className="hero-btns">
-            <button className='btn'><img src={play_icon} alt="" />Play</button>
-            <button className='btn dark-btn'><img src={info_icon} alt="" />More Info</button>
+            <button className="btn">
+              <img src={play_icon} alt="" />
+              Play
+            </button>
+            <button className="btn dark-btn">
+              <img src={info_icon} alt="" />
+              More Info
+            </button>
           </div>
-         <TitleCards />
+          <TitleCards />
         </div>
       </div>
+          <div className="more-cards">
+          <TitleCards title={"Blockbuster Movies"}/>
+          <TitleCards title={"Only on netflix"}/>
+          <TitleCards title={"Upcomeing"}/>
+          <TitleCards title={"Top pics for You"}/>
+        </div>
+        <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
